@@ -19,7 +19,7 @@ function updateTime() {
         hour12: false
     };
 
-    // Si no es local, añadimos la propiedad timeZone al objeto de configuración
+    // Si no es local, añadimos la propiedad timeZone al objeto de configuracion
     if (timezone !== 'local') {
         options.timeZone = timezone;
     }
