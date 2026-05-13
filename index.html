@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj Mundial Pro - AI Pair Programming</title>
+    <!-- Vinculación de estilos externos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Reloj Mundial</h1>
+        
+        <div class="clock-card">
+            <!-- Etiqueta de accesibilidad para el selector -->
+            <label for="timezone-select">Selecciona una ciudad:</label>
+
+            <p></p>
+            <p></p>
+            
+            <!-- Selector de zonas horarias con identificador para JS -->
+            <select id="timezone-select">
+                <!-- optgroup permite agrupar opciones por categorías para mejorar la UX -->
+                <optgroup label="Local">
+                    <option value="local">📍 Mi hora local</option>
+                </optgroup>
+                
+                <optgroup label="América">
+                    <!-- Los valores (value) siguen el estándar IANA (Area/Location) -->
+                    <option value="America/New_York">Nueva York, EE.UU.</option>
+                    <option value="America/Mexico_City">Ciudad de México, MX</option>
+                    <option value="America/Argentina/Buenos_Aires">Buenos Aires, AR</option>
+                    <option value="America/Bogota">Bogotá, CO</option>
+                    <option value="America/Los_Angeles">Los Ángeles, EE.UU.</option>
+                </optgroup>
+
+                <optgroup label="Europa">
+                    <option value="Europe/Madrid">Madrid, España</option>
+                    <option value="Europe/London">Londres, Reino Unido</option>
+                    <option value="Europe/Paris">París, Francia</option>
+                    <option value="Europe/Moscow">Moscú, Rusia</option>
+                </optgroup>
+
+                <optgroup label="Asia y Oceanía">
+                    <option value="Asia/Tokyo">Tokio, Japón</option>
+                    <option value="Asia/Dubai">Dubái, EAU</option>
+                    <option value="Asia/Seoul">Seúl, Corea del Sur</option>
+                    <option value="Australia/Sydney">Sídney, Australia</option>
+                </optgroup>
+
+                <optgroup label="África">
+                    <option value="Africa/Cairo">El Cairo, Egipto</option>
+                    <option value="Africa/Johannesburg">Johannesburgo, Sudáfrica</option>
+                </optgroup>
+            </select>
+
+            <!-- Contenedor donde se renderizará la hora (actualizado vía JS) -->
+            <div id="display" class="time-display">00:00:00</div>
+            
+            <!-- Contenedor para la fecha larga -->
+            <p id="date-display"></p>
+        </div>
+    </div>
+
+    <!-- Carga del script al final para asegurar que el DOM esté listo -->
+    <script src="script.js"></script>
+</body>
+</html>

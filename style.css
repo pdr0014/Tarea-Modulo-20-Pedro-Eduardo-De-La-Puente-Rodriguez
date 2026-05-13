@@ -1,0 +1,92 @@
+/* Importación de una fuente más moderna y limpia */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&display=swap');
+
+body {
+    /* Degradado que representa el cielo global: del azul profundo al púrpura espacial */
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7028e4 100%);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite; /* Animación sutil del fondo */
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+/* Animación para que el fondo se mueva suavemente */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: -1px;
+}
+
+/* Estilo Glassmorphism: parece cristal translúcido */
+.clock-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px); /* Desenfoque del fondo */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 3rem 2rem;
+    border-radius: 30px;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.clock-card:hover {
+    transform: translateY(-10px); /* Efecto de flotación al pasar el mouse */
+}
+
+/* Personalización del selector */
+select {
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+select:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo del texto de la hora */
+.time-display {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 1.5rem 0;
+    color: #00f2fe; /* Color cian eléctrico */
+    text-shadow: 0 0 20px rgba(0, 242, 254, 0.5);
+}
+
+/* Estilo de la fecha */
+#date-display {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    text-transform: capitalize;
+    color: #ffa7af; /* Tono rosado suave para contrastar */
+}
+
+/* Estilo para los grupos dentro del select (en algunos navegadores) */
+optgroup {
+    background-color: #2a5298;
+    color: white;
+}
