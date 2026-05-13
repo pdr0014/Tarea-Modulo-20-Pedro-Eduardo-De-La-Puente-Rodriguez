@@ -33,3 +33,10 @@ The project follows a standard professional version control workflow:
 2. **Branching**: A `feature-update` branch was used to implement and test specific modifications before merging into the `main` branch.
 3. **Commit History**: Descriptive messages were used to document the evolution of the HTML, CSS, and documentation.
 4. **Remote Integration**: The local history was pushed to a public GitHub repository.
+
+## Branching and Merging Process
+To comply with the project requirements, a specific Git workflow was followed to simulate a real-world feature update:
+
+1. **Branch Creation**: A new branch named `feature-update` was created using:
+   ```bash
+   git checkout -b feature-update
